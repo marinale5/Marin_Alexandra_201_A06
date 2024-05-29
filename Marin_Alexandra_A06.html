@@ -3403,12 +3403,12 @@ $SO$height
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mat_rand_rounded)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]   70   50 2000   10   90
-[2,]  300 1000   20   60   90
-[3,]   50 1000   10 1000  200
-[4,]  400 1000  800 2000 1000
-[5,] 1000  300 2000  600 2000
-[6,]  500 1000  400   10  600</code></pre>
+[1,]  900   80 2000  300 2000
+[2,]   80   20  500   40 1000
+[3,] 2000  600 2000 2000   70
+[4,] 1000 1000   90  200  500
+[5,]   10   30  300  700   80
+[6,]   50 2000 1000  100  200</code></pre>
 </div>
 </div>
 </section>
@@ -3511,6 +3511,21 @@ $SO$height
 <p>Write a recursive function that calculates the sum of the digits in a number.</p>
 <p>Example: The number 312 would return 6 (3 + 1 + 2)</p>
 <p>Run your function with 935068.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>sum_of_digits <span class="ot">&lt;-</span> <span class="cf">function</span>(number) {</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (number <span class="sc">&lt;</span> <span class="dv">10</span>) {</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(number)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(number <span class="sc">%%</span> <span class="dv">10</span> <span class="sc">+</span> <span class="fu">sum_of_digits</span>(number <span class="sc">%/%</span> <span class="dv">10</span>))</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">sum_of_digits</span>(<span class="dv">935068</span>)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 31</code></pre>
+</div>
+</div>
 </section>
 </section>
 
